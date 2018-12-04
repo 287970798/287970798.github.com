@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>php.sprintf | 轻风掠翼</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="格式值字符串 s123$format = &quot;%s&quot;;echo sprintf($format, &apos;hello&apos;); // hello 十进制数字 d123$format = &quot;%d&quot;;echo sprintf($format, 2);   // 2 浮点数 f / F12$format = &quot;%f&quot;;echo sprintf($format, 2);   // 2.000000  f 本地设置 F">
+<meta name="keywords" content="php">
+<meta property="og:type" content="article">
+<meta property="og:title" content="php.sprintf">
+<meta property="og:url" content="http://blog.websign.cn/2018/12/04/php-sprintf/index.html">
+<meta property="og:site_name" content="轻风掠翼">
+<meta property="og:description" content="格式值字符串 s123$format = &quot;%s&quot;;echo sprintf($format, &apos;hello&apos;); // hello 十进制数字 d123$format = &quot;%d&quot;;echo sprintf($format, 2);   // 2 浮点数 f / F12$format = &quot;%f&quot;;echo sprintf($format, 2);   // 2.000000  f 本地设置 F">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-12-04T06:25:49.114Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="php.sprintf">
+<meta name="twitter:description" content="格式值字符串 s123$format = &quot;%s&quot;;echo sprintf($format, &apos;hello&apos;); // hello 十进制数字 d123$format = &quot;%d&quot;;echo sprintf($format, 2);   // 2 浮点数 f / F12$format = &quot;%f&quot;;echo sprintf($format, 2);   // 2.000000  f 本地设置 F">
+  
+    <link rel="alternate" href="/atom.xml" title="轻风掠翼" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">轻风掠翼</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.websign.cn"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-php-sprintf" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/12/04/php-sprintf/" class="article-date">
+  <time datetime="2018-12-04T06:24:29.000Z" itemprop="datePublished">2018-12-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      php.sprintf
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="格式值"><a href="#格式值" class="headerlink" title="格式值"></a>格式值</h1><h2 id="字符串-s"><a href="#字符串-s" class="headerlink" title="字符串 s"></a>字符串 s</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$format = <span class="string">"%s"</span>;</span><br><span class="line"><span class="keyword">echo</span> sprintf($format, <span class="string">'hello'</span>); <span class="comment">// hello</span></span><br></pre></td></tr></table></figure>
+<h2 id="十进制数字-d"><a href="#十进制数字-d" class="headerlink" title="十进制数字 d"></a>十进制数字 d</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$format = <span class="string">"%d"</span>;</span><br><span class="line"><span class="keyword">echo</span> sprintf($format, <span class="number">2</span>);   <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+<h2 id="浮点数-f-F"><a href="#浮点数-f-F" class="headerlink" title="浮点数 f / F"></a>浮点数 f / F</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$format = <span class="string">"%f"</span>;</span><br><span class="line"><span class="keyword">echo</span> sprintf($format, <span class="number">2</span>);   <span class="comment">// 2.000000</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>f</code> 本地设置</li>
+<li><code>F</code> 非本地设置</li>
+</ul>
+<h1 id="附加格式值"><a href="#附加格式值" class="headerlink" title="附加格式值"></a>附加格式值</h1><blockquote>
+<p>必须放在<code>%</code>与格式值字母之间，例如 <code>%.2f</code></p>
+</blockquote>
+<h2 id="在正数前面加上-标记"><a href="#在正数前面加上-标记" class="headerlink" title="在正数前面加上 + 标记"></a>在正数前面加上 + 标记</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$format = <span class="string">'%+d'</span>;</span><br><span class="line"><span class="keyword">echo</span> sprintf($format, <span class="number">2</span>);   <span class="comment">// +2</span></span><br><span class="line"><span class="keyword">echo</span> sprintf($format, <span class="number">-2</span>);  <span class="comment">// -2</span></span><br><span class="line"></span><br><span class="line">$format = <span class="string">'%d'</span>;</span><br><span class="line"><span class="keyword">echo</span> sprintf($format, <span class="number">2</span>);   <span class="comment">// 2</span></span><br><span class="line"><span class="keyword">echo</span> sprintf($format, <span class="number">-2</span>);  <span class="comment">// -2</span></span><br></pre></td></tr></table></figure>
+<h2 id="小于最小宽度时填充-‘x"><a href="#小于最小宽度时填充-‘x" class="headerlink" title="小于最小宽度时填充 ‘x"></a>小于最小宽度时填充 ‘x</h2><p><code>&#39;x</code>  单个单引号开头，’x’可以是任意单个字符<br>必须和<code>宽度指示器</code>一起使用。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$format = <span class="string">"%'x5s"</span>;  <span class="comment">// 当宽度小于5时用x填充为5位</span></span><br><span class="line"><span class="keyword">echo</span> sprintf($format, <span class="string">'a'</span>); <span class="comment">// 'xxxxa'</span></span><br><span class="line"></span><br><span class="line">$format = <span class="string">"%'03d"</span>;</span><br><span class="line"><span class="keyword">echo</span> sprintf($format, <span class="number">2</span>);   <span class="comment">// '002' 最小宽度为3，小于3位时，用0补位</span></span><br></pre></td></tr></table></figure>
+<h2 id="后置填充"><a href="#后置填充" class="headerlink" title="后置填充"></a>后置填充</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$format = <span class="string">"%'x5d"</span>;  <span class="comment">// 默认前置填充</span></span><br><span class="line"><span class="keyword">echo</span> sprintf($format, <span class="number">2</span>);   <span class="comment">// xxxx2</span></span><br><span class="line"></span><br><span class="line">$format = <span class="string">"%'x-5d"</span>; <span class="comment">// 后置填充</span></span><br><span class="line"><span class="keyword">echo</span> sprintf($format, <span class="number">2</span>);   <span class="comment">// 2xxxx</span></span><br></pre></td></tr></table></figure>
+<h2 id="宽度指示器-0-9"><a href="#宽度指示器-0-9" class="headerlink" title="宽度指示器 [0-9]"></a>宽度指示器 <code>[0-9]</code></h2><p>规定变量值的最小宽度，宽度不够时，用空格补位</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$format = <span class="string">'%3d'</span>;</span><br><span class="line"><span class="keyword">echo</span> sprintf($format, <span class="number">2</span>);   <span class="comment">// '  2';</span></span><br></pre></td></tr></table></figure>
+<h2 id="小数位数或最大字符串长度-0-9"><a href="#小数位数或最大字符串长度-0-9" class="headerlink" title="小数位数或最大字符串长度 .[0-9]"></a>小数位数或最大字符串长度 <code>.[0-9]</code></h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$format = <span class="string">'%.2f'</span>;</span><br><span class="line"><span class="keyword">echo</span> sprintf($format, <span class="number">3</span>);</span><br><span class="line"></span><br><span class="line">$format = <span class="string">'%.2s'</span>;</span><br><span class="line"><span class="keyword">echo</span> sprintf($format, <span class="string">'123456'</span>);    <span class="comment">// '12' 最大宽度为2，从左向右取两位</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.websign.cn/2018/12/04/php-sprintf/" data-id="cjp9d10920002woi1cdigcg8o" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/12/03/php-function-特殊形式的函数/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">php.function.特殊形式的函数</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/php/" style="font-size: 10px;">php</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/12/04/php-sprintf/">php.sprintf</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/03/php-function-特殊形式的函数/">php.function.特殊形式的函数</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/03/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 轻风掠翼<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
